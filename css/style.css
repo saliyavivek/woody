@@ -1,0 +1,245 @@
+/* variables */
+:root {
+    --dark: #0d120e;
+    --gray: #686a69;
+    --darker-gray: #f5f5f5;
+    --light-gray: #f7f7f7;
+    --primary: #d2ee7d;
+    
+    /* sizes */
+    --sm: 480px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1280px;
+    --2xl: 1536px;
+}
+
+/* default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+a, 
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+}
+
+button, button:active button:active:disabled {
+    border-style: none;
+    background: transparent;
+    color: inherit;    
+    font-weight: inherit;
+    font-family: 'Raleway';
+}
+
+/* utility classes  */
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: (var(--sm));
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: (var(--md));
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: (var(--lg));
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+.main-heading {
+    font-size: 60px;
+    line-height: 150%;
+    font-weight: 700;
+}
+.sub-heading {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--gray);
+}
+button {
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: inherit;
+}
+section {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+}
+.left {
+    flex: 1;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+.main-heading-2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+/* header  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 150%;
+    width: 20%;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-self: flex-end;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray);
+    gap: 2rem;
+}
+
+.navbar-accounts-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--gray);
+}
+
+.navbar-accounts-items li {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.navbar-accounts-items li:first-child {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+/* hero section  */
+.hero {
+    display: flex;
+    padding: 0 20px;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero-image img {
+    height: 450px;
+    width: 400px;
+    border-radius: 40px;
+}
+
+.hero-call-to-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.hero-call-to-action .link a {
+    text-decoration: underline;
+}
+
+/* new collection section */
+.new-collection {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 70px;
+}
+
+/* shop section */
+.shop-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 75px;
+}
+
+.shop-categories {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+.shop-categories-item {
+    background-color: var(--darker-gray);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.shop-categories-item:first-child {
+    background-color: var(--primary);
+}
+
+.shop-section .bottom {
+    display: flex;
+    gap: 60px;
+    justify-content: start;
+    align-items: center;
+}
+
+.shop-section .bottom .shop-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop-card .shop-image img {
+    height: 340px;
+    width: 280px;
+    object-fit: cover;
+}
+
+.shop-category-name {
+    font-weight: 600;
+}
