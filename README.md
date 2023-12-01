@@ -1,6 +1,6 @@
-# Woody - A Furniture Shop
+# Woody - A Furniture Shop website
 
-## Woody is a fully-responsive furniture website build for enhancing my frontend skills.
+## Woody is a fully-responsive furniture website where one can find most luxurious and finest quality furnishings, build for the sake enhancing my frontend skills.
 
 ## Technologies used :
    1. HTML
