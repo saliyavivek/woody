@@ -93,14 +93,24 @@ section {
 }
 .right {
     display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+.right-col {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 1;
+    flex-direction: column;
 }
 .main-heading-2 {
     font-size: 45px;
     font-weight: 700;
     line-height: 150%;
+}
+img {
+    width: 100%;
 }
 
 /* header  */
@@ -242,4 +252,96 @@ section {
 
 .shop-category-name {
     font-weight: 600;
+}
+
+/* experience section */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.experience .left {
+    position: relative;
+}
+
+.experience .left img {
+    position: absolute;
+    top: 9px;
+    left: 7%;
+    width: 44%;
+}
+
+.experience .background {
+    background-color: var(--primary);
+    height: 268px;
+    width: 284px;
+    border-radius: 18px;
+}
+
+/* banner section */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    gap: 70px;
+    margin-top: 75px;
+    background-color: var(--darker-gray);
+    padding: 70px;
+}
+
+.banner .left {
+    margin-left: 15%;
+}
+
+.banner-call-to-action {
+    display: flex;   
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+/* gallery section  */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.gallery .gallery-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 3rem 0;
+}
+
+.image-gallery .image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-gallery .image-container img {
+    object-fit: cover;
+    border-radius: 18px;
+    height: 100%;
+}
+
+.image-gallery .image-container:nth-child(2) {
+    grid-row: span 2;
 }
