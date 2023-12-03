@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 a, 
@@ -95,7 +96,8 @@ section {
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: flex-end;
+    gap: 20px;
+    justify-content: end;
 }
 .right-col {
     display: flex;
@@ -111,6 +113,12 @@ section {
 }
 img {
     width: 100%;
+}
+.white-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 /* header  */
@@ -231,7 +239,7 @@ img {
 
 .shop-section .bottom {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     justify-content: start;
     align-items: center;
 }
@@ -340,8 +348,198 @@ img {
     object-fit: cover;
     border-radius: 18px;
     height: 100%;
+    cursor: pointer;
 }
 
 .image-gallery .image-container:nth-child(2) {
     grid-row: span 2;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: display 500ms ease-in-out;
+    border-radius: 1rem;
+}
+
+.overlay-text {
+    transform: translateY(100%);
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    bottom: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay-text h3 {
+    font-weight: 600;
+}
+
+.overlay-text p {
+    font-size: 14px;
+}
+
+.image-container:hover .overlay-text {
+    transform: translateY(0);
+}
+
+.image-container:hover .overlay {
+    display: block;
+}
+
+/* new product section  */
+.new-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.new-product img {
+    width: 44%;
+}
+
+.new-product .left {
+    position: relative;
+}
+
+.new-product .left .strips .strip {
+    content: "";
+    position: absolute;
+    top: 60px;
+    height: 90%;
+    width: 20px;
+    background-color: var(--primary);
+    transform: rotate(145deg);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.new-product .left .strips .angle1 {
+    left: calc(0px + 3%);
+}
+
+.new-product .left .strips .angle2 {
+    left: calc(80px + 3%);
+}
+
+.new-product .left .strips .angle3 {
+    left: calc(160px + 3%);
+}
+
+.new-product .left .strips .angle4 {
+    left: calc(240px + 3%);
+}
+
+.call-to-action {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* project section  */
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.project .top-section {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    padding: 30px 0;
+}
+
+.project-card::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 0;
+    background-color: var(--gray);
+}
+
+.project-count {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.project-short-content {
+    display: flex;   
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+.project-short-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.project-short-content p {
+    height: 3em;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 400px;
+    height: 150px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.project-call-to-action .outline {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    filter: brightness(0.75);
+    color: var(--primary);
+}
+
+/* footer section  */
+footer {
+    padding: 20px;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #d4d4d4;
+}
+
+footer .center {
+    font-weight: 600;
 }
